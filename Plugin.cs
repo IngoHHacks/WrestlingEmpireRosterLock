@@ -11,7 +11,7 @@ namespace WrestlingEmpireRosterLock
     {
         public const string PluginGuid = "IngoH.WrestlingEmpire.WrestlingEmpireRosterLock";
         public const string PluginName = "WrestlingEmpireRosterLock";
-        public const string PluginVer = "1.0.0";
+        public const string PluginVer = "1.1.0";
 
         internal static ManualLogSource Log;
         internal readonly static Harmony Harmony = new(PluginGuid);
@@ -38,11 +38,11 @@ namespace WrestlingEmpireRosterLock
             Logger.LogInfo($"Unloaded {PluginName}!");
         }
         
-        [HarmonyPatch(typeof(EEOKBCJJILL), "DKPEGLFPLME")]
+        [HarmonyPatch(typeof(HCBPJJMJCFL), "HDMMJGCJCGK")]
         [HarmonyPrefix]
-        private static bool EEOKBCJJILL_DKPEGLFPLME_(int FCKDOPLEBIE)
+        private static bool HCBPJJMJCFL_HDMMJGCJCGK(int GGKMEJIAHFN)
         {
-            if (FCKDOPLEBIE >= 23 && FCKDOPLEBIE <= 26)
+            if (GGKMEJIAHFN >= 23 && GGKMEJIAHFN <= 26)
             {
                 return false;
             }
